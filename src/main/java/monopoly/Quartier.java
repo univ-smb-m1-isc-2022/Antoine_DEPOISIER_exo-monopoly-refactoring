@@ -1,5 +1,7 @@
 package monopoly;
 
+import monopoly.case_monopoly.CaseConstructible;
+
 import java.util.ArrayList;
 import java.util.List;
 

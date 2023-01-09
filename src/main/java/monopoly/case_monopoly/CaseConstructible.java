@@ -1,6 +1,8 @@
-package monopoly;
+package monopoly.case_monopoly;
 
-public class CaseConstructible extends Case{
+import monopoly.case_monopoly.Case;
+
+public class CaseConstructible extends Case {
 
     private final int coutAchat;
     private final int loyer;

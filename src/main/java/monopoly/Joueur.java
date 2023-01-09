@@ -1,5 +1,8 @@
 package monopoly;
 
+import monopoly.case_monopoly.Case;
+import monopoly.case_monopoly.CaseConstructible;
+
 import java.util.ArrayList;
 
 public class Joueur implements Comparable {
@@ -144,10 +147,7 @@ public class Joueur implements Comparable {
     public void joue(int total, Case dep, Case imp, Case lux, Case allerenpri, Case priso) {
         for (int i = 0; i < total; i++) {    // deplace le joueur en fonction du lancer
             position = position.retourneCaseSuivante();
-            if (dep.equals(position)) {  // si il passe par le depart
-                argent = argent + 200;
-                tour++;
-            }
+            position.passerSur(this);
         }
         if (imp.equals(position)) {  // si il arrive sur impot
             argent = (int) Math.floor(argent * 0.9);
@@ -321,6 +321,14 @@ public class Joueur implements Comparable {
         compteur++;
     }
         System.out.println(".") ;
+    }
+
+    public void ajouterArgent(int argentAAjoute) {
+        argent += argentAAjoute;
+    }
+
+    public void faitUnTourEnPlus() {
+        tour++;
     }
 
 

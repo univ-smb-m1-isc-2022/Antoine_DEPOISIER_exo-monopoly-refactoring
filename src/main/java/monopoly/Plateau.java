@@ -1,12 +1,17 @@
 package monopoly;
 
+import monopoly.case_monopoly.Case;
+import monopoly.case_monopoly.CaseConstructible;
+import monopoly.case_monopoly.CaseDepart;
+import monopoly.case_monopoly.CaseSpeciale;
+
 import java.util.ArrayList;
 
 public class Plateau {
 
 
-    public Case depart;
-    public  CaseConstructible bellevile;
+    public CaseDepart depart;
+    public CaseConstructible bellevile;
     public  CaseConstructible lecourbe;
     public  CaseConstructible vaugirard;
     public  CaseConstructible courcelles;
@@ -28,7 +33,7 @@ public class Plateau {
     public  CaseConstructible capucines;
     public  CaseConstructible champs;
     public  CaseConstructible paix;
-    public  CaseSpeciale luxe;
+    public CaseSpeciale luxe;
     public  CaseSpeciale impot;
     public  CaseSpeciale prison;
     public  CaseSpeciale allerenprison;
@@ -45,7 +50,7 @@ public class Plateau {
     }
 
     private void creerLesCases(){
-    depart = new CaseSpeciale("Depart");
+    depart = new CaseDepart("Depart");
     bellevile = new CaseConstructible("Boulevard de Bellevile", 20, 2,"v");
     lecourbe = new CaseConstructible("Rue Lecourbe", 40, 4, "v");
     vaugirard = new CaseConstructible("Rue Vaugirard", 60, 6,"b");

@@ -1,4 +1,6 @@
-package monopoly;
+package monopoly.case_monopoly;
+
+import monopoly.Joueur;
 
 public abstract class Case {
 
@@ -17,6 +19,13 @@ public abstract class Case {
         return suivante;
     }
 
+    public void sArreterSur(){
+
+    }
+
+    public void passerSur(Joueur joueur){
+
+    }
 
     public String getName() {
         return name;
