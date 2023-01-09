@@ -1,4 +1,4 @@
-package net.guillaume.teaching.refactoring.monopoly;
+package monopoly;
 
 import java.util.ArrayList;
 
@@ -43,9 +43,6 @@ public class Plateau {
     creerLesCasesSuivantes();
     genererListeCaseSansProprietaire();
     }
-
-
-
 
     private void creerLesCases(){
     depart = new CaseSpeciale("Depart");
